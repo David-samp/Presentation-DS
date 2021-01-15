@@ -110,6 +110,7 @@ header
     text-align: center;
     flex-wrap: wrap;
     margin: auto;
+    position: relative;
 }
 
 #img_presentation
@@ -130,6 +131,7 @@ header
     width: 600px;
     text-align: justify;
     margin: 50px;
+    position: relative;
 }
 
 #h_presentation
@@ -185,7 +187,7 @@ header
 
 .three
 {
-    background-color:rgb(231, 229, 240, 0.829);
+    background-color:rgba(231, 229, 240, 0.829);
     padding-bottom: 50px;
     padding-top: 50px;
 }
@@ -196,6 +198,9 @@ header
     height: 400px;
     margin:auto;
     position: relative;
+    border: solid;
+    border-radius: 1em;
+    background-image: linear-gradient(rgba(231, 229, 240, 0.829) 00% ,rgb(0, 0, 0) 100%);
 }
 
 .cont-slides 
@@ -204,8 +209,8 @@ header
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: center;
+    color: white;
 }
 
 .cont-slides div
@@ -217,6 +222,7 @@ header
     transition: opacity 0.2s ease-in-out;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -257,24 +263,24 @@ header
 {
     top: 50%;
     transform: translateY(-50%);
-    left: -55px;
+    left: 25px;
 }
 
 .commandes button:nth-child(2)
 {
     top: 50%;
     transform: translateY(-50%);
-    right: -55px;
+    right: 25px;
 }
 
 .commandes button:nth-child(1) img 
 {
-    left: -4px;
+    left: -2px;
 }
 
 .commandes button:nth-child(2) img 
 {
-    right: -4px;
+    right: -2px;
 }
 
 .active
@@ -352,8 +358,7 @@ footer
 
 #canvas1 {
     position: absolute;
+    background-color:rgba(231, 229, 240, 0.829);
     width: 100%;
     height: 100%;
-    background: #333;
-    display: none;
 }
