@@ -50,15 +50,14 @@ body
 header
 {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     text-align: center;
     color: rgb(255, 255, 255);
-    height: 560px;
-    margin: auto;
-    padding-top: 60px;
-    width: 500px;
+    height: 100vh;
+
 }
+
 .button_cont
 {
     display: flex;
@@ -98,6 +97,10 @@ header
 {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    width: 500px;
+    text-align: center;
+    position: relative;
 }
 
 #presentation
@@ -106,7 +109,7 @@ header
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color:rgba(231, 229, 240, 0.829);
+    background-color:#40434E;
     text-align: center;
     flex-wrap: wrap;
     margin: auto;
@@ -132,6 +135,7 @@ header
     text-align: justify;
     margin: 50px;
     position: relative;
+    color: aliceblue;
 }
 
 #h_presentation
@@ -156,6 +160,7 @@ header
     align-items: center;
     color: aliceblue;
     flex-wrap: wrap-reverse;
+    background-color: #702632;
 }
 
 #texte_resume
@@ -187,20 +192,20 @@ header
 
 .three
 {
-    background-color:rgba(231, 229, 240, 0.829);
-    padding-bottom: 50px;
-    padding-top: 50px;
+    background-color:#912F40;
+    width: 100%;
+    display: flex
 }
 
 .slider 
 {
-    width: 700px;
+    width: 100vh;
     height: 400px;
-    margin:auto;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
     position: relative;
-    border: solid;
-    border-radius: 1em;
-    background-image: linear-gradient(rgba(231, 229, 240, 0.829) 00% ,rgb(0, 0, 0) 100%);
+    
 }
 
 .cont-slides 
@@ -210,7 +215,8 @@ header
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: white;
+    align-items: center;
+    color: rgb(0, 0, 0);
 }
 
 .cont-slides div
@@ -222,7 +228,7 @@ header
     transition: opacity 0.2s ease-in-out;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -251,6 +257,7 @@ header
     align-items: center;
     cursor: pointer;
     border-style: none;
+    background-color: #c0c0c0;
 }
 
 .commandes img 
@@ -263,14 +270,14 @@ header
 {
     top: 50%;
     transform: translateY(-50%);
-    left: 25px;
+    left: -30px;
 }
 
 .commandes button:nth-child(2)
 {
     top: 50%;
     transform: translateY(-50%);
-    right: 25px;
+    right: -30px;
 }
 
 .commandes button:nth-child(1) img 
@@ -286,6 +293,11 @@ header
 .active
 {
     opacity: 1!important;
+}
+
+.active ul{
+    border-top: solid;
+    padding-top: 30px;
 }
 
 a
@@ -307,18 +319,17 @@ footer
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    background-color: #fdfdfd;
 }
 .icons
 {
     list-style-type: none;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
     padding: 0px;
     margin: 40px;
-}
-.icon_brands {
-    margin: 10px;
 }
 
 .copyright {
@@ -341,6 +352,7 @@ footer
     -moz-transform: scale(1);
     transition: all 200ms ease-in;
     transform: scale(1); 
+    border-radius: 1em;
 }
 
 .illus:hover{
@@ -358,7 +370,49 @@ footer
 
 #canvas1 {
     position: absolute;
-    background-color:rgba(231, 229, 240, 0.829);
+    background-color:#40434E;
     width: 100%;
     height: 100%;
+}
+
+.imgmini{
+    display: none;
+}
+
+.cv{
+    display: none;
+}
+
+@media screen and (max-width: 450px) {
+    .illus{
+        display: none;
+    }
+
+    .imgmini{
+        display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    }
+
+    #txt_presentation{
+        margin-top: 0px;
+    }
+
+    #txt_resume{
+        margin-bottom: 0px;
+    }
+
+    .slider{
+        display: none;
+    }
+
+    .cv{ 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 600px;
+        text-align: center;
+        margin: 50px;
+    }
 }
